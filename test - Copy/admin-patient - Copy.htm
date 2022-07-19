@@ -1,0 +1,1458 @@
+<!DOCTYPE html>
+      <html lang='en' style='height: 100%'>
+		<head>
+			<meta charset='UTF-8'>
+			<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+			<title>Admin Panel</title>
+			<style>
+				.form-group.specialNote {
+							border: 1px solid #000;
+						}
+				.explain-row {
+					display: flex;
+					justify-content: space-between;
+				}
+				.orange {
+					background: orange;	
+				}
+				.pink {
+					background: pink;	
+				}
+				.blue {
+					background: blue;	
+				}
+				.yellow {
+					background: yellow;	
+				}
+				.green {
+					background: green;	
+				}
+				.colorDiv{width: 25px;height: 25px;border-radius: 50%;margin: 0 8px;}
+				.hair-removal-Checklist .form-check-input[type=checkbox] {width: 20px;height: 20px;margin-right: 15px;}
+				.Intake-page-3 h3 {color: #103073;}
+				table.intake-table th, td {border-right: 1px solid #fff;padding: 10px;}
+				table.intake-table th {color: #fff;background: #103073;}
+				table.intake-table td {color: #103073;}
+				tr.greyRow {background: #cccdd5;}
+				tr.blueRow {background: #e7e8eb;}
+				table.intake-table {
+						width: 75%;
+						margin: auto;
+					}
+				.rections h5 {
+						color: #777;
+						font-weight: 600;
+					}
+			</style>
+			
+		</head>
+		<body>
+			<section class = "">
+				<div  class = "container">
+					<div class = "Intake-main py-5">
+						<h2 class = "text-center">PATIENT INTAKE FORM</h2>
+						<form class = "patient-intake-form mt-4 mb-3">
+				<!---- *******form row one ******* --->
+							<div class = "row form-row mb-3">
+								<div class="form-group col-md-4">
+								  <label for="fname">FirstName:</label>
+								  <input type="text" class="form-control" id="fname" placeholder="Fname">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="Lname">LastName:</label>
+								  <input type="text" class="form-control" id="Lname" placeholder="Lname">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="Lname">Today's Date:</label>
+								  <input type="date" class="form-control" id="Lname" placeholder="date">
+								</div>
+							</div>
+				<!---- ******* form row 2 ******* --->
+							<div class = "row form-row mb-3">
+								<div class="form-group col-md-4">
+								  <label for="ydb">Your Date Of Birth:</label>
+								  <input type="date" class="form-control" id="ydb">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="age">Age:</label>
+								  <input type="text" class="form-control" id="age">
+								</div>
+								<div class = "form-group col-md-4">									
+									  <label class = "d-block pb-2">Gender:</label>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+									  <label class="form-check-label" for="inlineRadio1">Male</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+									  <label class="form-check-label" for="inlineRadio2">Female</label>
+									</div>
+								</div>
+							</div>
+				<!---- ******* form row 3 ******* --->
+							<div class = "row form-row mb-3">
+								<div class="form-group col-md-6">
+								  <label for="adds">Address:</label>
+								  <input type="text" class="form-control" id="adds">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="aprt">Apartments#</label>
+								  <input type="text" class="form-control" id="aprt">
+								</div>
+								<div class = "form-group col-md-2">
+									  <input class="form-check-input"type="checkbox" name="na" id="na" value="na">
+									  <label class="form-check-label" for="inlineRadio2">N/A</label>
+								</div>
+							</div>
+				<!---- ******* form row 4 ******* --->
+							<div class = "row form-row mb-3">
+								<div class="form-group col-md-4">
+								  <label for="city">City:</label>
+								  <input type="text" class="form-control" id="city" placeholder="City">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="Lname">State:</label>
+								  <select class="form-select" id="state" placeholder="State">
+									<option selected>Select your state</option>
+									<option>state1</option>
+									<option>state2</option>
+									<option>state3</option>
+									<option>state4</option>
+									<option>state5</option>
+								  </select>
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="zip">ZIP:</label>
+								  <input type="text" class="form-control" id="zip" placeholder="Zip Code">
+								</div>
+							</div>
+				<!---- ******* form row 5 ******* --->
+							<div class = "row form-row mb-3">
+								<div class="form-group col-md-4">
+								  <label for="phone">Phone or Mobile:</label>
+								  <input type="text" class="form-control" id="phone" placeholder="Phone Number">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="home">Home:</label>
+								  <input type="text" class="form-control" id="home" placeholder="Home">
+								</div>
+								<div class="form-group col-md-4">
+								  <label for="work">Work:</label>
+								  <input type="text" class="form-control" id="work" placeholder="Work">
+								</div>
+							</div>
+				<!---- ******* form row 5 ******* --->
+							<div class = "row form-row mb-3 mt-2">
+								<div class = "form-group col-md-12">									
+									  <label class = "">Best number to leave any confidential information regarding your treatment and messages: (please circle)</label>	
+									<div class="form-check form-check-inline mx-3">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="Mobile">
+									  <label class="form-check-label" for="inlineRadio1">Mobile</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Home">
+									  <label class="form-check-label" for="inlineRadio2">Home</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="Work">
+									  <label class="form-check-label" for="inlineRadio2">Work</label>
+									</div>
+								</div>
+							</div>
+				<!---- ******* form row 5 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-12">									
+									<label class = "form-check-label" for = "email">E-mail address:</label>
+									<input type="email" class="form-control" id="email" placeholder="E-mail">
+								</div>
+							</div>
+				<!---- ******* form row 6 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-12">									
+									<label class = "form-check-label" for = "hyham">How did you hear about us?</label>
+									<input type="email" class="form-control" id="hyham" placeholder="">
+								</div>
+							</div>	
+				<!---- ******* form row 7 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-12">									
+									  <label class = "">Marital Status (please circle):</label>	
+									<div class="form-check form-check-inline mx-3">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio1" value="Single">
+									  <label class="form-check-label" for="inlineRadio1">Single</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Married">
+									  <label class="form-check-label" for="inlineRadio2">Married</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Widowed">
+									  <label class="form-check-label" for="inlineRadio2">Widowed</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Divorced">
+									  <label class="form-check-label" for="inlineRadio2">Divorced</label>
+									</div>
+								</div>
+							</div>
+				<!---- ******* form row 8 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-6">									
+									<label class = "form-check-label" for = "occup">Occupation/Employer:</label>
+									<input type="email" class="form-control" id="occup">
+								</div>
+								<div class = "form-group col-md-6">									
+									<label class = "form-check-label" for = "hobby">Hobbies/Activities:</label>
+									<input type="email" class="form-control" id="hobby">
+								</div>
+							</div>	
+				<!---- ******* form row 9 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-12">									
+									  <label class = "form-check-label">Ethnicity (please circle):</label>	
+									<div class="form-check form-check-inline mx-3">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio1" value="Caucasian">
+									  <label class="form-check-label" for="inlineRadio1">Caucasian</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Hispanic">
+									  <label class="form-check-label" for="inlineRadio2">Hispanic</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="African American">
+									  <label class="form-check-label" for="inlineRadio2">African American</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Asian">
+									  <label class="form-check-label" for="inlineRadio2">Asian</label>
+									</div>
+								</div>
+							</div>
+				<!---- ******* form row 10 ******* --->
+							<div class = "row form-row mb-3 align-items-center">
+								<div class = "form-group col-md-4 specialNote px-3">									
+									<span>
+										(Note: Ethnicity, national origin 
+										and race may affect how skin 
+										reacts to laser / IP
+									</span>
+								</div>		
+								<div class = "form-group col-md-8">									
+									<div class="form-check form-check-inline mx-3">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio1" value="Middle Eastern">
+									  <label class="form-check-label" for="inlineRadio1">Middle Eastern</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Pacific Islander">
+									  <label class="form-check-label" for="inlineRadio2">Pacific Islander</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="African American">
+									  <label class="form-check-label" for="inlineRadio2">Other</label>
+									</div>
+									<div class="form-check form-check-inline">
+									  <input class="form-check-input" type="radio" name="marrital" id="inlineRadio2" value="Prefer not to answer">
+									  <label class="form-check-label" for="inlineRadio2">Prefer not to answer.</label>
+									</div>
+								</div>
+							</div>
+				<!---- ******* form row 11 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-4">									
+									<label class = "form-check-label" for = "ePhone"><mark>Emergency Contact Name:</mark></label>
+									<input type="text" class="form-control" id="ePhone">
+								</div>
+								<div class = "form-group col-md-4">									
+									<label class = "form-check-label" for = "hobby">Relationship to you:</label>
+									<input type="text" class="form-control" id="hobby">
+								</div>
+								<div class = "form-group col-md-4">									
+									<label class = "form-check-label" for = "hobby">Phone Number:</label>
+									<input type="text" class="form-control" id="hobby">
+								</div>
+							</div>	
+				<!---- ******* form row 12 ******* --->
+							<div class = "row form-row mb-3">
+								<div class = "form-group col-md-6">									
+									<label class = "form-check-label" for = "occup"><mark>Primary Care Physician:</mark></label>
+									<input type="text" class="form-control" id="occup">
+								</div>
+								<div class = "form-group col-md-6">									
+									<label class = "form-check-label" for = "hobby">Phone Number:</label>
+									<input type="text" class="form-control" id="hobby">
+								</div>
+							</div>
+			<!---- *************************************DETAILED MEDICAL HISTORY*************************************** --->
+							<div class = "detailed-medical mt-4">
+								<h2 class = "text-center">DETAILED MEDICAL HISTORY</h2>
+								<div class = "row mt-4">
+									<div class = "col-md-10">
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Skin Conditions (Psoriasis, Eczema, Scars, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="skin" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="skin" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Heart Disease (Heart Attack, Palpitations, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="heart" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="heart" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Neurological Disease (Seizures, Epilepsy, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="neuro" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="neuro" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Lung Disease (COPD, Asthma, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="lung" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="lung" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Liver/Kidney Disease (Cirrhosis, Hepatitis, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="liver" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="liver" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Cancer (Leukemia, Lymphoma, Melanoma, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="cancer" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="cancer" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Digestive Problems (IBS, Diarrhea, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="digest" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="digest" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Hypertension/Vascular disease (DVT, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="vascular" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="vascular" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Trauma (serious car accidents, injuries, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="trauma" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="trauma" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Infectious Disease (Tuberculosis, STDs, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="infection" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="infection" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Immunosuppression (HIV, AIDS, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="hiv" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="hiv" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Endocrine Disorder (Thyroid, Diabetes, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="thyroid" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="thyroid" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Mental Illness (Depression, Suicide, Bipolar, etc):</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="mental" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="mental" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-2">
+											<div class = "explain-row form-group col-md-7">									
+											  <label class = "form-check-label">Any OTHER medical problems:</label>
+												<div class="ExYsNo">
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="otherD" id="noRadio1" value="no">
+													  <label class="form-check-label" for="noRadio1">No</label>
+													</div>
+													<div class="form-check form-check-inline">
+													  <input class="form-check-input" type="radio" name="otherD" id="yesRadio2" value="yes">
+													  <label class="form-check-label" for="yesRadio2">YES</label>
+													</div>
+												</div>
+											</div>
+											<div class = "col-md-5 d-flex">
+												<label class = "form-check-inline">(If YES, explain):</label>
+												<input type="text" class="explainYes"/>
+											</div>
+										</div>
+										<div class = "row mb-3">
+											<div class = "form-group col-md-6">									
+												<label class = "col-form-label">List ALL current MEDICATIONS:</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class = "form-group col-md-6">									
+												<label class = "col-form-label">List ALLERGIES:</label>
+												<input type="text" class="form-control">
+											</div>
+										</div>
+									</div>
+									<div class = "col-md-2 mb-2">
+										<textarea class="form-control" placeholder = "FOR OFFICE USE" rows="8"></textarea>
+									</div>
+								</div>
+								<div class = "row mb-3">
+									<div class = "form-group col-md-6">									
+										<label class = "col-form-label" for = "oFFUse">OFFICE USE ONLY:</label>
+										<input type="text" class="form-control" id="oFFUse">
+									</div>
+									<div class = "form-group col-md-6">									
+										<label class = "col-form-label" for = "sign">STAFF SIGNATURE:</label>
+										<input type="text" class="form-control" id="sign">
+									</div>
+								</div>
+								<div class = "row d-flex justify-content-center">
+									<div class = "colorDiv orange">
+										<input type = "checkbox" class = "ClrCheck" name = "orange"/>
+									</div>
+									<div class = "colorDiv pink">
+										<input type = "checkbox" class = "ClrCheck" name = "pink"/>
+									</div>
+									<div class = "colorDiv blue">
+										<input type = "checkbox" class = "ClrCheck" name = "blue"/>
+									</div>
+									<div class = "colorDiv green">
+										<input type = "checkbox" class = "ClrCheck" name = "green"/>
+									</div>
+									<div class = "colorDiv yellow">
+										<input type = "checkbox" class = "ClrCheck" name = "yellow"/>
+									</div>
+								</div>
+							</div>
+						</form>
+						<!---- Page 2 ------>
+						<div class = "intake-page2 mt-4 mb-4">
+							<form class = "intakeFormPage2">								
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Do you have an allergy to Bacitracin®, Polysporin®, Neosporin® or any other topical antibiotic cream? </label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="allergy" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="allergy" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Do you have an allergy to any topical anesthetics such as Benzocaine, Tetracaine or Lidocaine?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes1" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes1" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Have you used Accutane®, Claravis®, Sotret® or Amnesteem® (Isotretinoin) in the last six months?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes2" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes2" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Do you have a history of herpes simplex (“cold sores” or “fever blisters”) or infection in area to be treated?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes3" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes3" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Female patients only: Are you pregnant or breast-feeding?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes4" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes4" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-12">								
+									  <label class = "form-check-label">Female patients only: Do you take any kind of birth control?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes5" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="yes5" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "form-group col-md-10">									
+										<label class = "col-form-label" for = "oFFUse">Last Sun Exposure (tanning / outdoor activity): </label>
+										<input type="text" class="form-check-inline" />
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-6">								
+									  <label class = "form-check-label">Do you use tanning beds or spray-on tanning?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="tanning" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="tanning" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+									<div class = "form-group col-md-6 d-flex justify-content-start">								
+									  <label class = "form-check-label">Last exposure:</label>
+										<input type="text" class="form-control" />
+									</div>
+								</div>
+								<div class = "row mb-2">
+									<div class = "explain-row form-group col-md-4">								
+									  <label class = "form-check-label">Do you smoke?</label>
+										<div class="ExYsNo">
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="smoke" id="noRadio1" value="no">
+											  <label class="form-check-label" for="noRadio1">No</label>
+											</div>
+											<div class="form-check form-check-inline">
+											  <input class="form-check-input" type="radio" name="smoke" id="yesRadio2" value="yes">
+											  <label class="form-check-label" for="yesRadio2">YES</label>
+											</div>
+										</div>
+									</div>
+									<div class = "form-group col-md-8 d-flex justify-content-start">								
+									  <label class = "form-check-label">If YES, how much and how often?</label>
+										<input type="text" class="form-check-inline" />
+									</div>
+								</div>
+								<div class = "row mb-2 mt-3">
+									  <span class = "form-span mb-3">How does your skin react when exposed to the sun? (please circle only ONE of these six choices below)</span>									
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="noRadio1" value="Always Burns & Never Tans">
+									  <label class="form-check-label" for="noRadio1">Always Burns & Never Tans</label>
+									</div>
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="yesRadio2" value="yes">
+									  <label class="form-check-label" for="yesRadio2">Burns Easily & Tans Minimally</label>
+									</div>
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="yesRadio2" value="yes">
+									  <label class="form-check-label" for="yesRadio2">Sometimes Burns & Slowly Tans</label>
+									</div>
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="yesRadio2" value="yes">
+									  <label class="form-check-label" for="yesRadio2">Burns Minimally & Usually Tans</label>
+									</div>
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="yesRadio2" value="yes">
+									  <label class="form-check-label" for="yesRadio2">Rarely Burns & Tans Well</label>
+									</div>
+									<div class="form-check col-md-2">
+									  <input class="form-check-input" type="radio" name="sunTan" id="yesRadio2" value="yes">
+									  <label class="form-check-label" for="yesRadio2">Never Burns & Always Tans</label>
+									</div>
+								</div>
+								<!----------------- for HAIR REDUCTION patients only START --------------------->
+								<div class = "hair-reduction mt-4">
+									<h2 class = "text-center">for HAIR REDUCTION patients only</h2>
+									<div class = "row mt-3">
+										<div class = "col-md-5">
+											<label class = "L-reduction">Which body areas are you interested in having hair reduced?</label>
+										</div>
+										<div class = "col-md-7">
+											<input class = "form-control" type = "text"/>
+										</div>
+									</div>
+									<!-- yesno for previous 1-->
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-6">								
+										  <label class = "form-check-label">Have you had previous laser hair reduction treatments?</label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="previous" value="no">
+												  <label class="form-check-label">No</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="previous" value="yes">
+												  <label class="form-check-label">YES</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-6 d-flex justify-content-start">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									<!-- yesno for previous 2-->
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-6">								
+										  <label class = "form-check-label">Has your skin or hair changed in any way recently? </label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="hairChange" value="no">
+												  <label class="form-check-label">No</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="hairChange" value="yes">
+												  <label class="form-check-label">YES</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-6 d-flex justify-content-start">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									<div class = "row mt-3">
+										<div class = "col-md-5">
+											<label class = "L-reduction">Why do you want hair reduction treatment?</label>
+										</div>
+										<div class = "col-md-7">
+											<input class = "form-control" type = "text"/>
+										</div>
+									</div>
+									<div class = "row mt-3">
+										<div class = "col-md-5">
+											<label class = "L-reduction">Please describe the hair you want treated:</label>
+										</div>
+										<div class = "col-md-7">
+											<input class = "form-control" type = "text"/>
+										</div>
+									</div>
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-10">								
+										  <label class = "form-check-label">Are you currently using a retinol or retinoid (Retin-A®, Tretinoin, Renova®, Tazorac®, Differin®) or glycolic acid?</label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="previous" value="no">
+												  <label class="form-check-label">No</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="previous" value="yes">
+												  <label class="form-check-label">YES</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-2 d-flex justify-content-start">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									<p class = "text-center mt-4 mb-4">WHAT	AREAS	ARE	YOU	INTERESTED	IN	RECEIVING	LASER	HAIR	REMOVAL TODAY?	</p>
+									<div class = "hair-removal-Checklist">
+										<div class = "col-md-10 m-auto">
+											<div class = "row">
+											<!---- First check box coloum ----->
+												<div class = "col-md-4">	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Full	Body</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Face</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Brazilian</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Brazilian	Extended</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Legs</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Arms</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Back</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Chest</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Abdomen/Full Belly</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Hands	and	Fingers</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Feet and Toes</label>
+													</div>
+												</div>
+												<!---- check box coloum 2 ----->
+												<div class = "col-md-4">	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Mid	brow</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Nose</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Cheeks</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Chin</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Ears</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Hairline</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Forehead</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Scalp</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Beard	Line</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Back of Neck</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Front of Neck</label>
+													</div>
+												</div>
+												<!---- check box coloum 3 ----->
+												<div class = "col-md-4">	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Shoulder Caps</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Side Burns</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Areolas</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Belly	Line</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Bikini Line</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Buttocks</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Elbows</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Knees</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Inner	Thighs</label>
+													</div>	
+													<div class="form-check mb-2">
+													  <input class="form-check-input" type="checkbox" name="todayRemoval">
+													  <label class="form-check-label">Underarms</label>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!----------------- for HAIR REDUCTION patients only END --------------------->
+								<!----------------- for NAIL FUNGUS REMOVAL patients only START --------------------->
+								
+								<div class = "detailed-medical mt-4">
+									<h2 class = "text-center">for NAIL FUNGUS REMOVAL patients only</h2>
+									<div class = "row mt-5">
+										<div class = "col-md-5">
+											<label class = "L-reduction">Number of years infected?</label>
+										</div>
+										<div class = "col-md-7">
+											<input class = "form-control" type = "text"/>
+										</div>
+									</div>
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-6">								
+										  <label class = "form-check-label">Any problems with the area besides this? </label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="anyProblem" value="no">
+												  <label class="form-check-label">No</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="anyProblem" value="yes">
+												  <label class="form-check-label">YES</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-6 d-flex justify-content-start">
+											<input type="text" class="form-control" />
+										</div>
+									</div>	
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-7">								
+										  <label class = "form-check-label">What other medications, prescription or over the counter have you used? </label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="otherMed" value="no">
+												  <label class="form-check-label">None</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-5 d-flex justify-content-start">
+											<label class="form-check-label w-50">or names of medication</label>
+											<input type="text" class="form-control w-50" />
+										</div>
+									</div>	
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-7">								
+										  <label class = "form-check-label">What are you currently doing at home (home remedies)? </label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="otherMed" value="no">
+												  <label class="form-check-label">None</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-5 d-flex">
+											<label class="form-check-label mx-3">or</label>
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+									<div class = "row mt-3">
+										<div class = "explain-row form-group col-md-6">								
+										  <label class = "form-check-label">Have you seen a physician in the past about this matter?</label>
+											<div class="ExYsNo">
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="pastPhy" value="no">
+												  <label class="form-check-label">No</label>
+												</div>
+												<div class="form-check form-check-inline">
+												  <input class="form-check-input" type="radio" name="pastPhy" value="yes">
+												  <label class="form-check-label">YES</label>
+												</div>
+											</div>
+										</div>
+										<div class = "form-group col-md-6 d-flex">
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>	
+								<!------ for NAIL FUNGUS REMOVAL patients only END ------>		
+									
+							</form>
+							<!------ Second page End Here!!!!!!!! ------>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class = "Intake-page-3 my-4">
+				<div class = "container">
+					<div class = "rections">
+						<h3 class = "text-center px-4">
+						Please choose the Skin Type that matches your features and Reaction to UV (30 minutes of sunlight without SPF)
+						</h3>
+						<form>
+							<div class = "mt-3">
+								<table class = "intake-table">
+									<tr>
+										<td></td>
+										<th>Skin<br/> Type</th>
+										<th>Common <br/>Features</th>
+										<th>Reaction to <br/>UV*</th>
+									</tr>
+									<tr class = "greyRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">I</td>
+										<td>Very fair / blue eyes /<br/> freckles</td>
+										<td>Always burns, never <br/>tans</td>
+									</tr>
+									<tr class = "blueRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">II</td>
+										<td>Fair / blue, hazel or green<br/> eyes</td>
+										<td>Always or usually burns, tans with difficulty, tan fades rapidly</td>
+									</tr>
+									<tr class = "greyRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">III</td>
+										<td>Cream white / fair with any eye or <br/>hair color / very common</td>
+										<td>Sometimes mild burn, always or usually tans, tan stays for weeks</td>
+									</tr>
+									<tr class = "blueRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">IV</td>
+										<td>Brown / typical Mediterranean skin /<br/>
+											moderately pigmented and may <br/>
+											include Asian, Middle Eastern, <br/>
+											Indian, Hispanic 
+										</td>
+										<td>Rarely burns, tans with <br/>ease, tan stays for months</td>
+									</tr>
+									<tr class = "greyRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">V</td>
+										<td>Darker brown / darker skin type and <br/>may include Asian, Middle Eastern, <br/>Indian, Hispanic, Mediterranean (non <br/>Caucasian)</td>
+										<td>Very rarely burns, tans <br/>very easily</td>
+									</tr>
+									<tr class = "blueRow">
+										<td class = "text-center"><input class="form-check-input" type="radio" name="pastPhy" value="no"></td>
+										<td class = "text-center">VI</td>
+										<td>Darkest brown, black (non Caucasian)</td>
+										<td>Never burns, tans very <br/>easily</td>
+									</tr>
+								</table>
+							</div>
+							<div class="mt-3 text-center">
+								<h5>Adapted from Fitzpatrick TB</h5>
+								<h5>The Validity and Practicality of Sun-Reactive Skin Types I through VI</h5>
+								<h5>Arch Dermatol-Vol 124, June 1988</h5>
+							</div>
+						</form>
+					</div>
+				</div>
+				<div class = "container">
+					<div class = "rections">
+						<div class = "row form-row mb-3">
+							<div class="col-md-12">
+								<h4 class = "text-center pt-5">Are there any other services that you are interested in?</h4>
+							</div>
+						</div>
+						<div class = "row form-row mb-3">
+							<div class="col-md-6">
+								<h4 class="pt-5">Lasers:</h4>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Laser Hair Removal What area of the body?
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Laser Nail Fungus Remova
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Laser Sun Spot Removal
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h4 class="pt-5">Skin Services:</h4>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Microneedling
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Dermaplaning
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Chemical Peel
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr">  Facial Services
+									</div>
+								</div>
+								<!---->
+								<h4 class="pt-5">What are yourskin concerns?</h4>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Acne
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Discoloration/ Uneven	Skin Tone
+									</div>
+								</div><div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Hyperpigmentation / Sun damage
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Fine lines/	wrinkles
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Texture
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Rosacea
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Dryness
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> Other: <input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class = "row form-row mb-3">
+							<div class="col-md-12">
+								<h4 class = "text-center pt-5">Testimonial,Photo,&,Video,Release</h4>
+							</div>
+							<div class="col-md-12">
+								<p>Please"initial"any"or"all"of"the"following"that"apply:"</p>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> I agree to allow my treatment photos, testimonials, and/or videos to be used for promotional 
+purposes. I understand that my name and identifying information will be used. 
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> "I"agree"to"allow"my"treatment"photos, testimonials, and/or videos"to"be"used"for"promotional"
+purposes."I"understand"that"my"name"and"identifying"information"will"NOT"be"used."
+									</div>
+								</div>
+								<div class = "form-group">		
+									<div class="form-check form-check-inline">
+										<input type="checkbox" name="lsr" id="lsr"> I"DO NOT agree"to"allow the use of"my"treatment"photos, testimonials, and/or 
+videos"for"promotional"purposes.
+									</div>
+								</div>
+								</p>This"agreement"supersedes"any"previous"agreement"you"have"with"this establishment or it's other facilities regarding testimonial, photo"and/or"video"usage."</p>
+							</div>
+							<div class="col-md-7">
+								<div class = "form-group  pt-5">		
+									<div class="form-check form-check-inline">
+										<span>SIGNED: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+								<div class = "form-group  pt-3">		
+									<div class="form-check form-check-inline">
+										<span>Print Name: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class = "form-group pt-5">		
+									<div class="form-check form-check-inline">
+										<span>Date: </span><input type="date" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 pt-5">
+								<hr/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="container">
+					<div class = "detailed-medical mt-4">
+						<div class = "row mt-3">
+							<div class="col-md-12">
+								<h2 class = "text-center">POLICIES, PROCEDURES, AGREEMENTS and CONSENTS</h2>
+								<p>The next two pages are intended to provide you with detailed information about our policies, programs, agreements and consents. Please read each section thoroughly, make sure any concerns are addressed and that any questions you have are answered before making your final decision to move forward with the treatment process.</p>
+							</div>
+						</div>
+						<div class = "row mt-3">
+							<div class="col-md-12">
+								<h2 class = "text-center">HIPAA PATIENT CONSENT</h2>
+								<p>Our office is committed to protecting the privacy of your medical information. The Health Insurance Portability and Accountability Act (HIPAA) of 1996 (and updated in 2013) is a federal law that governs the use and disclosure of a personʼs health information. Our “Notice of Privacy Practices” provides information about how we may use and disclose protected health information about you. The Notice contains a “Patient Rights” section describing your rights under the law. The following statements cover the basics of your rights as a patient under HIPAA:</p>
+								<ul>
+									<li>Our office has a “Notice of Privacy Practices” and you have the right to review a detailed copy of our Notice before signing this HIPAA Patient Consent.</li>
+									<li>This “Notice of Privacy Practices” is available in our offices.</li>
+									<li>Protected health information may be disclosed for treatment, payment, or health care operations.</li>
+									<li>We reserve the right to change the terms of our “Notice of Privacy Practices” at any time.</li>
+									<li>If we change our Notice, you may obtain a revised copy by contacting our office.</li>
+									<li>You have the right to restrict the uses of your protected health information.</li>
+									<li>You may revoke this HIPAA Consent in writing at any time. However, such a revocation shall not affect</li>
+									any disclosures we have already made in reliance on your prior Consent.</li>
+								</ul>
+								<p>Additionally, it is the policy of this office to remind patients of their appointments. We may do this via live telephone calls, automated (TeleVox) appointment reminder calls, text messages, e-mails, U.S mail, social media or by any means convenient to the practice. We may also send you other communications informing you of changes to office policy, new technology and specials that you might find valuable or informative. That said, contact will only come directly from us; we will never sell or trade your private information including phone numbers, e-mail address or mailing addresses. You may opt out of any or all communication measures any time by contacting us in writing.</p>
+								<p>By signing the next page of this document, you certify that you have read our HIPAA Patient Consent and have had the opportunity to review a more detailed version if so desired. Your signature also signifies that you agree with the above statements and this policy. This establishment provides this form and information in compliance with the Health Insurance Portability and Accountability Act (HIPAA) of 1996 (updated in 2013).</p>
+								<h2 class = "text-center">TELEHEALTH (TELEMEDICINE) CONSENT and VIDEO/PHOTO AGREEMENT</h2>
+								<p>My signature below certifies that I understand, agree and consent that this establishment and its employees, independent contractors, associates, agents, sister facilities and representatives (collectively and hereby known as, “MEDSPA”,) may take photographs and/or use video (for “store & forward” or teleconferencing technology) of the area to be treated before initial treatment begins & at some or all reoccurring visits (genital area photos and videos are usually NOT taken). These recordings will be available only to our medical staff members to assess the patient and track the progression of each treatment and are part of the medical record. MEDSPA follows extremely strict HIPPA guidelines regarding patient confidentiality and privacy & therefore names and recordings are used internally and only the treated area/area to be assessed will be shown in these photographs & videos.</p>
+							</div>
+						</div>
+						<div class="row mt-2">
+							<div class="col-md-7">
+								<div class = "form-group  pt-5">		
+									<div class="form-check form-check-inline">
+										<span>Print Patient Name: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+								<div class = "form-group  pt-3">		
+									<div class="form-check form-check-inline">
+										<span>Patient Signature: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-5">
+								<div class = "form-group pt-5">		
+									<div class="form-check form-check-inline">
+										<span>Date: </span><input type="date" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!------ POLICIES, PROCEDURES, AGREEMENTS and CONSENTS END ------>
+				</div>
+			</section>
+			<section class = "AppointmentPolicy-page-3 my-4 mt-5">
+				<div class = "container">
+					<div class = "detailed-medical mt-4">
+						<div class="row mt-5">
+							<div class="col-md-12">
+								<h2 class = "text-center">APPOINTMENT POLICY</h2>
+								<p>This establishment strives to treat all clients at their scheduled times. Keeping your appointments allows for better results because you are able to stay on your hair growth schedule. Additionally, no-shows block out otherwise available slots for other clients to get in to stay on their treatment schedules. Clients must provide 24 hours notice if they need to reschedule or are unable to make their appointment. <p>
+								<ul>
+									<li>Clients must pay a $25.00 “no show” / “late cancellation” fee if they miss an appointment or do not	give 24 hours notice of a cancellation or re-schedule.</li>
+									<li>If the provided credit card declines, This establishment will penalize by applying the treatment areas scheduled on the day of the no-show as used.</li>
+								</ul>
+								<h5>*As a courtesy to our clients we try to send out email and text reminders. However, not receiving those reminders will not excuse a missed appointment.</h5>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-12">
+								<p>Please choose Option 1 or Option 2 
+								<p><span class="optnval">Option 1: </span>Your credit card information can be encrypted and stored with our credit card processor in a very secure manner. This establishment won’t have access to the card’s information. We will only be able to charge it for no show fees and purchases if you decide to use it in the future. For this option, please hand your card to the front desk coordinator and we will get the information added and stored securely. </p>
+							</div>
+							<div class="col-md-12">
+								<p><span class="optnval">Option 2: You can fill out the information below and we will keep your card info in your file.</p>
+							</div>
+							<div class="col-md-6">
+								<div class = "form-group  pt-2">		
+									<div class="form-check form-check-inline">
+										<span>Name of Client:</span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class = "form-group  pt-2">		
+									<div class="form-check form-check-inline">
+										<span>Name on Credit Card: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class = "form-group  pt-2">		
+									<div class="form-check form-check-inline">
+										<label>Card Type (circle one):</label>
+										<input type="radio" name="ccctype" id="lsr" value="Visa"> Visa
+										<input type="radio" name="ccctype" id="lsr" value="Mastercard"> Mastercard
+										<input type="radio" name="ccctype" id="lsr" value="AmEx"> AmEx
+										<input type="radio" name="ccctype" id="lsr" value="Discover"> Discover
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class = "form-group  pt-2">		
+									<div class="form-check form-check-inline">
+										<span>Credit Card #:</span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class = "form-group  pt-2">		
+									<div class="form-check form-check-inline">
+										<span>Expiration Date: </span><input type="text" name="lsr" id="lsr">
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 pt-2">
+								<p><i>My signature below indicates that I understand Glow Medspa Hair’s no-show policy and that I authorize my credit card to be charged in accordance with the terms of the policy should I be in violation of these terms</i></p>
+							</div>
+						</div>
+						<div class="row mt-5">
+							<div class="col-md-12">
+								<h2 class = "text-center">FINANCIAL RESPONSIBILITY POLICY</h2>
+								<p>My signature below certifies that I hereby seek the services of GLOW MEDSPA, and its employees, independent contractors, associates, agents and representatives (collectively and hereby known as, “GLOW MEDSPA ”,) for laser, collagen induction therapy and/or dermatological care. I understand that microneedling and laser treatments, such as hair reduction, are voluntary procedures and are not covered by Medicare, Medicaid, Medi-Cal, HMO, PPO, or  private insurance plans. I understand that GLOW MEDSPA will not submit any claims to any insurance carriers. I understand that payment is due before services are rendered. I also understand and agree that if I pay for a package of services using a credit card, check or finance company and the payment is not honored or is subject to a chargeback at any time for any reason that I am still fully responsible for payment for the treatments I receive and agree to pay for them at the undiscounted (“pay as you go”) rate. I agree to pay a fee of $25.00 for each check or charge that is not honored by my bank. Lastly, I fully acknowledge that I am personally responsible for all fees and charges incurred in connection with my purchase and I completely understand that there is absolutely NO refunding of any patient fees, payments, charges, credit, gift certificates, product purchases or pre-paid packages.</p>	
+							</div>
+							<div class="col-md-12">
+								<div class="table-responsive">          
+								<table class="table table-bordered">
+									<tbody>
+										<tr>
+											<th>
+												<input type="text" name="lsr" id="lsr">
+											</th>
+											<th>
+												<input type="text" name="lsr" id="lsr">
+											</th>
+										</tr>
+										<tr>
+											<th>
+												<label>PRINTED NAME OF PATIENT</label>
+											</th>
+											<th>
+												<label>TODAYʼS DATE</label> 
+											</th>
+										</tr>
+										<tr>
+											<th>
+												<input type="text" name="lsr" id="lsr">
+											</th>
+											<th>
+												<input type="text" name="lsr" id="lsr">
+											</th>
+										</tr>
+										<tr>
+											<th>
+												<label>PATIENT SIGNATURE (or signature of legal guardian if patient is under 18)</label>
+											</th>
+											<th>
+												<label>This space for office use only (Staff Signature) </label> 
+											</th>
+										</tr>
+									</tbody>
+								</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</body>
+	</html>	
+		
+
